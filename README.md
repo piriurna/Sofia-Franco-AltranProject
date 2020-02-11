@@ -9,7 +9,7 @@ Projeto Colaborador Franco e Sofia(Grupo 2)
   	Consultar colaborador
   	Remover Colaborador.
 
-	### Colaborador:
+	Colaborador:
 		nome,
 		n_id,
 		morada,
