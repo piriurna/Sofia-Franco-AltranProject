@@ -4,11 +4,14 @@ public class Colaborador {
 	String name, n_id, address, cellphone,
 		email, imagePath, cvPath;
 	
+	TipoId tipoId;
+	
 	public Colaborador() {}
 	
-	public Colaborador(String name, String n_id, String address, String cellphone, String email, String imagePath,
+	public Colaborador(String name, TipoId tipoId, String n_id, String address, String cellphone, String email, String imagePath,
 			String cvPath) {
 		this.name = name;
+		this.tipoId = tipoId;
 		this.n_id = n_id;
 		this.address = address;
 		this.cellphone = cellphone;
