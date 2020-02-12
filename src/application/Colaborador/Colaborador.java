@@ -1,4 +1,4 @@
-package application;
+package application.colaborador;
 
 public class Colaborador {
 	String name, n_id, address, cellphone,
