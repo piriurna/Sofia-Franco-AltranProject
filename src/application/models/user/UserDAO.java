@@ -8,10 +8,11 @@ import java.sql.SQLException;
 import application.DBConnector;
 
 public class UserDAO {
-
+	private static DBConnector dbConnector = DBConnector.getConnector();
+	
 	public static boolean login(String username, String password) {
 		boolean connected = false;
-		Connection conn = DBConnector.getConnection("", "", "");
+		Connection conn = dbConnector.getConnection();
 		String sql = "";
 		try (PreparedStatement stat = conn.prepareStatement(sql); ResultSet rs = stat.executeQuery()) {
 			stat.setString(1, username);
@@ -34,7 +35,7 @@ public class UserDAO {
 	public static boolean register(User user, String password) {
 		if(alreadyRegistered(user.getUsername())) return false;
 		boolean success = false;
-		Connection conn = DBConnector.getConnection("", "", "");
+		Connection conn = dbConnector.getConnection();
 		String sql = "  ";
 		try (PreparedStatement stat = conn.prepareStatement(sql)) {
 			stat.setString(1, user.getUsername());
@@ -57,7 +58,7 @@ public class UserDAO {
 	}
 	
 	private static boolean alreadyRegistered(String username) {
-		Connection conn = DBConnector.getConnection("", "", "");
+		Connection conn = dbConnector.getConnection();
 		String sql = "  ";
 		try (PreparedStatement stat = conn.prepareStatement(sql); ResultSet rs = stat.executeQuery()) {
 			stat.setString(1, username);
