@@ -1,4 +1,4 @@
-package application.colaborador;
+package application.models.colaborador;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,7 +16,7 @@ public class ColaboradorDAO {
 		String sql = "";
 		try(Statement stat = conn.createStatement(); ResultSet rs = stat.executeQuery(sql)){
 			while(rs.next()) {
-				int id = rs.getInt(1);
+				String id = rs.getString(1);
 				String name = rs.getString(2);
 				TipoId tipoId = TipoId.valueOf(rs.getInt(3));
 				String nId = rs.getString(4);
@@ -25,7 +25,7 @@ public class ColaboradorDAO {
 				String email = rs.getString(7);
 				String imagePath = rs.getString(8);
 				String cvPath = rs.getString(9);
-				colaboradores.add(new Colaborador(name, tipoId, nId, address,
+				colaboradores.add(new Colaborador(id, name, tipoId, nId, address,
 						cellphone, email, imagePath, cvPath));
 			}
 		}catch(SQLException e) {

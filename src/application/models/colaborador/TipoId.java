@@ -1,4 +1,4 @@
-package application.colaborador;
+package application.models.colaborador;
 
 public enum TipoId {
 	PASSAPORTE(0), CARTAO_CIDADAO(1), OUTRO(2);

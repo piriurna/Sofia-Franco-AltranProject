@@ -1,15 +1,16 @@
-package application.colaborador;
+package application.models.colaborador;
 
 public class Colaborador {
-	String name, nId, address, cellphone,
+	private String id, name, nId, address, cellphone,
 		email, imagePath, cvPath;
 	
 	TipoId tipoId;
 	
 	public Colaborador() {}
 	
-	public Colaborador(String name, TipoId tipoId, String nId, String address,
+	public Colaborador(String id, String name, TipoId tipoId, String nId, String address,
 			String cellphone, String email, String imagePath,String cvPath) {
+		this.id = id;
 		this.name = name;
 		this.tipoId = tipoId;
 		this.nId = nId;
