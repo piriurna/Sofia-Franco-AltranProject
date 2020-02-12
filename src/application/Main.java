@@ -2,6 +2,9 @@ package application;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("");
+		String a = "ola";
+		String b = "ola";
+		a="alo";
+		System.out.println(a + " " + b);
 	}
 }
