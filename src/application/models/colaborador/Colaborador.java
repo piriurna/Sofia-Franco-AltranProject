@@ -4,37 +4,49 @@ public class Colaborador {
 	private String id, name, nId, address, cellphone,
 		email, imagePath, cvPath;
 	
-	TipoId tipoId;
+	private TipoId tipoId;
 	
 	public Colaborador() {}
 	
 	public Colaborador(String id, String name, TipoId tipoId, String nId, String address,
 			String cellphone, String email, String imagePath,String cvPath) {
+		this.setId(id);
+		this.setName(name);
+		this.setTipoId(tipoId);
+		this.setnId(nId);
+		this.setAddress(address);
+		this.setCellphone(cellphone);
+		this.setEmail(email);
+		this.setImagePath(imagePath);
+		this.setCvPath(cvPath);
+	}
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
 		this.id = id;
-		this.name = name;
-		this.tipoId = tipoId;
-		this.nId = nId;
-		this.address = address;
-		this.cellphone = cellphone;
-		this.email = email;
-		this.imagePath = imagePath;
-		this.cvPath = cvPath;
 	}
 
 	public String getName() {
 		return name;
+	}
+	
+	public String toString() {
+		return getName();
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public String getN_id() {
+	public String getnId() {
 		return nId;
 	}
 
-	public void setN_id(String n_id) {
-		this.nId = n_id;
+	public void setnId(String nId) {
+		this.nId = nId;
 	}
 
 	public String getAddress() {
@@ -75,6 +87,14 @@ public class Colaborador {
 
 	public void setCvPath(String cvPath) {
 		this.cvPath = cvPath;
+	}
+
+	public TipoId getTipoId() {
+		return tipoId;
+	}
+
+	public void setTipoId(TipoId tipoId) {
+		this.tipoId = tipoId;
 	}
 	
 }

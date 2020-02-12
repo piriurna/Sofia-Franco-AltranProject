@@ -1,6 +1,7 @@
 package application.models.colaborador;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,7 +14,7 @@ public class ColaboradorDAO {
 	public static ArrayList<Colaborador> getColaboradores() {
 		ArrayList<Colaborador> colaboradores = new ArrayList<>();
 		Connection conn = DBConnector.getConnection("","","");
-		String sql = "";
+		String sql = "  ";
 		try(Statement stat = conn.createStatement(); ResultSet rs = stat.executeQuery(sql)){
 			while(rs.next()) {
 				String id = rs.getString(1);
@@ -38,5 +39,20 @@ public class ColaboradorDAO {
 			}
 		}
 		return colaboradores;
+	}
+	
+	public static Colaborador insertColaborador(Colaborador addColaborador) {
+		Colaborador colaborador = null;
+		Connection conn = DBConnector.getConnection("","","");
+		String sql = "  ";
+		try(PreparedStatement stat = conn.prepareStatement(sql)){
+			stat.setString(1, addColaborador.getId());
+			stat.setString(2, addColaborador.getName());
+			stat.setString(3, String.valueOf(addColaborador.getTipoId()));
+			stat.setString(4, addColaborador.getId());
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
