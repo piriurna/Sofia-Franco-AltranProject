@@ -64,7 +64,7 @@ public class ColaboradorDAO {
 		}
 	}
 
-	public static void removeColaborador(Colaborador colaborador) {
+	public static void deleteColaborador(Colaborador colaborador) {
 		Connection conn = DBConnector.getConnection("", "", "");
 		String sql = "";
 		try (PreparedStatement stat = conn.prepareStatement(sql)) {
