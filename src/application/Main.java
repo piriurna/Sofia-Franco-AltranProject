@@ -1,13 +1,12 @@
 package application;
 
-import application.models.colaborador.ColaboradorDAO;
+import application.models.user.UserDAO;
 
 public class Main {
 	
 	public static void main(String args[]){ 
 	try{  
-		System.out.println(ColaboradorDAO.getColaboradores());
-		  
+		System.out.println(UserDAO.getAllUsers());
 		}catch(Exception e){ 
 			System.out.println(e);
 		}  
