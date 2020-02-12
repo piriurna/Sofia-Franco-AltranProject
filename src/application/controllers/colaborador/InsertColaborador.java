@@ -1,5 +1,5 @@
 package application.controllers.colaborador;
 
-public class InsertColaborador {
+public class InsertColaborador{
 	
 }
