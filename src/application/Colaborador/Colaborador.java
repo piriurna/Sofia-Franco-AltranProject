@@ -1,18 +1,18 @@
 package application.colaborador;
 
 public class Colaborador {
-	String name, n_id, address, cellphone,
+	String name, nId, address, cellphone,
 		email, imagePath, cvPath;
 	
 	TipoId tipoId;
 	
 	public Colaborador() {}
 	
-	public Colaborador(String name, TipoId tipoId, String n_id, String address, String cellphone, String email, String imagePath,
-			String cvPath) {
+	public Colaborador(String name, TipoId tipoId, String nId, String address,
+			String cellphone, String email, String imagePath,String cvPath) {
 		this.name = name;
 		this.tipoId = tipoId;
-		this.n_id = n_id;
+		this.nId = nId;
 		this.address = address;
 		this.cellphone = cellphone;
 		this.email = email;
@@ -29,11 +29,11 @@ public class Colaborador {
 	}
 
 	public String getN_id() {
-		return n_id;
+		return nId;
 	}
 
 	public void setN_id(String n_id) {
-		this.n_id = n_id;
+		this.nId = n_id;
 	}
 
 	public String getAddress() {
