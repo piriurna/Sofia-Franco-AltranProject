@@ -8,6 +8,10 @@
     }
 }
 
+nav {
+	background-color: #343a40;
+}
+
 .dropdown>.dropdown-menu {
   top: 200%;
   transition: 0.3s all ease-in-out;
