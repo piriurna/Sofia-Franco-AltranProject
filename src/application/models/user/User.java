@@ -12,6 +12,10 @@ public class User {
 		this.setEmail(email);
 		this.setCellphone(cellphone);
 	}
+	
+	public String toString() {
+		return username;
+	}
 
 	public int getId() {
 		return id;

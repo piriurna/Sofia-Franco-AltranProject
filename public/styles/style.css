@@ -1,4 +1,8 @@
+.navbar-dark .navbar-brand{
+	color: #E1AA12;
+ }
 
+<<<<<<< HEAD
 #logocontainer{
 	position: absolute
 	top:0px;
@@ -7,5 +11,72 @@
 	height: 100px;
 	background-color:#FF0000
 	
+=======
+.navbar-dark .navbar-nav .active>.nav-link{
+	color: #E1AA12;
 }
-	
+
+.navbar-dark .navbar-nav .nav-link{
+	color: rgba(225, 170, 18, 0.7);
+}
+
+@media (min-width: 768px) {
+.navbar-brand.abs
+    {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+.bg-custom {
+    background-color: #072446;
+}
+
+.dropdown>.dropdown-menu {
+  top: 200%;
+  transition: 0.3s all ease-in-out;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+  top: 100%;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.bg-image {
+	background-image: url("../images/image1.jpg");
+
+  	/* Add the blur effect */
+  	filter: blur(5px);
+  	-webkit-filter: blur(5px);
+
+	/* Full height */
+ 	height: 100%;
+
+  	/* Center and scale the image nicely */
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.bg-text {
+  background-color: #00B0A6; /* Fallback color */
+  background-color: rgb(7,36,70, 0.8); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #E1AA12;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+>>>>>>> 302e1db23804c777665be238a6694c839813f925
+}
