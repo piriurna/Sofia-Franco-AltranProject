@@ -1,3 +1,15 @@
+.navbar-dark .navbar-brand{
+	color: #E1AA12;
+ }
+
+.navbar-dark .navbar-nav .active>.nav-link{
+	color: #E1AA12;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: rgba(225, 170, 18, 0.7);
+}
+
 @media (min-width: 768px) {
 .navbar-brand.abs
     {
@@ -8,8 +20,8 @@
     }
 }
 
-nav {
-	background-color: #343a40;
+.bg-custom {
+    background-color: #072446;
 }
 
 .dropdown>.dropdown-menu {
@@ -24,10 +36,6 @@ nav {
 .dropdown>.dropdown-toggle:active {
   /*Without this, clicking will make it sticky*/
     pointer-events: none;
-}
-
-#logout{
-	color: #ff0000;
 }
 
 .bg-image {
@@ -47,11 +55,11 @@ nav {
 }
 
 .bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: #00B0A6; /* Fallback color */
+  background-color: rgb(7,36,70, 0.8); /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
-  border: 3px solid #f1f1f1;
+  border: 3px solid #E1AA12;
   position: absolute;
   top: 50%;
   left: 50%;
