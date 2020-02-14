@@ -4,15 +4,14 @@ public class Colaborador {
 	private String id, name, nId, address, cellphone,
 		email, imagePath, cvPath;
 	
-	private TipoId tipoId;
+
 	
 	public Colaborador() {}
 	
-	public Colaborador(String id, String name, TipoId tipoId, String nId, String address,
+	public Colaborador(String id, String name, String nId, String address,
 			String cellphone, String email, String imagePath,String cvPath) {
 		this.setId(id);
 		this.setName(name);
-		this.setTipoId(tipoId);
 		this.setnId(nId);
 		this.setAddress(address);
 		this.setCellphone(cellphone);
@@ -89,12 +88,6 @@ public class Colaborador {
 		this.cvPath = cvPath;
 	}
 
-	public TipoId getTipoId() {
-		return tipoId;
-	}
 
-	public void setTipoId(TipoId tipoId) {
-		this.tipoId = tipoId;
-	}
 	
 }
