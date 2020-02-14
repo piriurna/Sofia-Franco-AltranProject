@@ -5,14 +5,9 @@ import java.sql.Date;
 import application.models.colaborador.Colaborador;
 import application.models.colaborador.ColaboradorDAO;
 
-public class Main2 {
+public class Main {
 	
-<<<<<<< HEAD:src/application/Main2.java
 	public static void main2(String args[]){ 
-	try{  
-		System.out.println(UserDAO.getAllUsers());
-=======
-	public static void main(String args[]){ 
 	try{
 		//Recupera e imprime os valores do colaborador
 		ColaboradorDAO.getColaborador("1233").printInfo();
@@ -29,7 +24,6 @@ public class Main2 {
 		
 		//Deleta o colaborador com o cartaoCidadao Especificado
 		ColaboradorDAO.deleteColaborador("1234");
->>>>>>> bf2edaff4af0776e3a53ae30d4f8f043142449a7:src/application/Main.java
 		}catch(Exception e){ 
 			System.out.println(e);
 		}  

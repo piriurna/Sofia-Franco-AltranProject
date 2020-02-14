@@ -9,16 +9,7 @@ public class Colaborador {
 	
 	private Date birthday;
 	
-<<<<<<< HEAD
 
-	
-	public Colaborador() {}
-	
-	public Colaborador(String id, String name, String nId, String address,
-			String cellphone, String email, String imagePath,String cvPath) {
-		this.setId(id);
-		this.setName(name);
-=======
 	private FileInputStream imagePath, cvPath;
 	
 	public Colaborador() {}
@@ -28,7 +19,6 @@ public class Colaborador {
 		this.setId(id);
 		this.setName(name);
 		this.setBirthday(birthday);
->>>>>>> bf2edaff4af0776e3a53ae30d4f8f043142449a7
 		this.setnId(nId);
 		this.setAddress(address);
 		this.setCellphone(cellphone);
@@ -117,9 +107,6 @@ public class Colaborador {
 		this.cvPath = cvPath;
 	}
 
-<<<<<<< HEAD
-
-=======
 	public Date getBirthday() {
 		return birthday;
 	}
@@ -127,6 +114,5 @@ public class Colaborador {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
->>>>>>> bf2edaff4af0776e3a53ae30d4f8f043142449a7
 	
 }

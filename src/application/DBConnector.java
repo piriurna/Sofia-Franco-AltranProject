@@ -27,11 +27,7 @@ public final class DBConnector {
 	
 	private String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String USER = "system";
-<<<<<<< HEAD
 	private String PASS = "Pa$$word";
-=======
-	private String PASS = "Angelarm210526@";
->>>>>>> bf2edaff4af0776e3a53ae30d4f8f043142449a7
 
 	public static DBConnector getConnector() {
 		if (dbConnector == null)
