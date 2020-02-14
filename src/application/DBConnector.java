@@ -25,9 +25,9 @@ public final class DBConnector {
 	
 	public static DBConnector dbConnector = new DBConnector();
 	
-	private String URL = "jdbc:oracle:thin:@10.12.3.101:1521:xe";
+	private String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String USER = "system";
-	private String PASS = "Pa$$w0rd";
+	private String PASS = "Angelarm210526@";
 
 	public static DBConnector getConnector() {
 		if (dbConnector == null)
@@ -36,6 +36,13 @@ public final class DBConnector {
 	}
 
 	public Connection getConnection() {
+		try {
+		if(conn == null || conn.isClosed()) {
+			conn = DriverManager.getConnection(URL, USER, PASS);
+		}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
 		return conn;
 	}
 

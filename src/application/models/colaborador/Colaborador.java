@@ -1,24 +1,41 @@
 package application.models.colaborador;
 
+import java.io.FileInputStream;
+import java.sql.Date;
+
 public class Colaborador {
 	private String id, name, nId, address, cellphone,
-		email, imagePath, cvPath;
+		email;
 	
-	private TipoId tipoId;
+	private Date birthday;
+	
+	private FileInputStream imagePath, cvPath;
 	
 	public Colaborador() {}
 	
-	public Colaborador(String id, String name, TipoId tipoId, String nId, String address,
-			String cellphone, String email, String imagePath,String cvPath) {
+	public Colaborador(String id, String name,String address, String nId, Date birthday, 
+			String email, String cellphone, FileInputStream imagePath, FileInputStream cvPath) {
 		this.setId(id);
 		this.setName(name);
-		this.setTipoId(tipoId);
+		this.setBirthday(birthday);
 		this.setnId(nId);
 		this.setAddress(address);
 		this.setCellphone(cellphone);
 		this.setEmail(email);
 		this.setImagePath(imagePath);
 		this.setCvPath(cvPath);
+	}
+	
+	public void printInfo() {
+		System.out.println(id);
+		System.out.println(name);
+		System.out.println(birthday);
+		System.out.println(nId);
+		System.out.println(address);
+		System.out.println(cellphone);
+		System.out.println(email);
+		System.out.println(imagePath);
+		System.out.println(cvPath);
 	}
 	
 	public String getId() {
@@ -73,28 +90,28 @@ public class Colaborador {
 		this.email = email;
 	}
 
-	public String getImagePath() {
+	public FileInputStream getImagePath() {
 		return imagePath;
 	}
 
-	public void setImagePath(String imagePath) {
+	public void setImagePath(FileInputStream imagePath) {
 		this.imagePath = imagePath;
 	}
 
-	public String getCvPath() {
+	public FileInputStream getCvPath() {
 		return cvPath;
 	}
 
-	public void setCvPath(String cvPath) {
+	public void setCvPath(FileInputStream cvPath) {
 		this.cvPath = cvPath;
 	}
 
-	public TipoId getTipoId() {
-		return tipoId;
+	public Date getBirthday() {
+		return birthday;
 	}
 
-	public void setTipoId(TipoId tipoId) {
-		this.tipoId = tipoId;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 	
 }
