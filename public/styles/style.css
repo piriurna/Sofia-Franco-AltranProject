@@ -2,6 +2,7 @@
 	color: #E1AA12;
  }
 
+<<<<<<< HEAD
 #logocontainer{
 	position: absolute
 	top:0px;
@@ -11,6 +12,8 @@
 	background-color:#FF0000
 	
 
+=======
+>>>>>>> bf2edaff4af0776e3a53ae30d4f8f043142449a7
 .navbar-dark .navbar-nav .active>.nav-link{
 	color: #E1AA12;
 }
@@ -77,5 +80,8 @@
   width: 80%;
   padding: 20px;
   text-align: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> bf2edaff4af0776e3a53ae30d4f8f043142449a7
 }
