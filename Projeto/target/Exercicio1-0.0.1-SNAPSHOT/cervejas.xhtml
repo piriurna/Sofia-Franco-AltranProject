@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+ 	<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css"/>
+	<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Detalhe das Cervejas - Java Enterprise Application</title>
+</head>
+
+<body style="background-color: #FBF5EF; text-align: center;">
+	
+	<a href="home.html" target="mainFrame"><img src="logo.png" width="1920" height="100" border="0" /></a>
+	<div class="p-3 mb-2 .bg-danger text-red"></div> 
+
+<li class="nav-item">					
+<a class="nav-link" href="http://localhost:8080/Exercicio1/faces/home.html"><h5>Go back to the Main Page !</h5></a>   
+</li>  
+
+	<f:view>
+	
+		<h1><p class="font-italic">Craft Beer Lovers</p></h1>
+		<br></br>
+		<br></br>
+		
+		
+		<h:form>
+			<h4>Choose a beer from the list:</h4>
+			<h:selectOneMenu id="selDetalhe" valueChangeListener="#{DetalheBean.detalheReport}" onchange="submit()">
+			
+				<f:selectItem itemLabel="Selecione ..."/>
+				
+				<f:selectItems value="#{DetalheBean.detalhesSelectList}" id="detalhe"/>
+								
+			</h:selectOneMenu>
+			
+			
+			
+			
+			<h4>Choose a beer from the list:</h4>
+			<h:selectOneMenu id="selCerveja" valueChangeListener="#{CervejaBean.cervejaReport}" onchange="submit()">
+			
+				<f:selectItem itemLabel="Selecione ..."/>
+				
+				<f:selectItems value="#{CervejaBean.cervejasSelectList}" id="cerveja"/>
+					
+					<br></br>
+						
+			</h:selectOneMenu>
+				<h5>				
+						<h:outputText value="Beer Name: " />
+						<h:outputText value="#{CervejaBean.beerName}" />
+						
+						<br></br>
+						<h:outputText value="Category " />
+						
+						<h:outputText value="#{CervejaBean.category}" />
+				</h5>	
+				
+			<--!para dar informacao por baixo da lista-->
+			
+			
+		</h:form>
+		
+		<br></br>
+		<br></br>
+		<h:dataTable value="#{CervejaBean.cervejasList}" var="cerveja" styleClass="table" cellspacing="10"
+					headerClass="table-header" rowClasses="table-odd-row, table-even-row">
+			<h:column>
+				<center><h1><f:facet name="header"><h:outputText value="Category"/></f:facet></h1></center>
+				<h5><h:outputText value="#{cerveja.beerName}" /></h5>
+			</h:column>
+			
+			
+			<h:column>
+				<center><h1><f:facet name="header"><h:outputText value="Category" /></f:facet></h1></center>
+				<h5><h:outputText value="#{cerveja.category}" /></h5>
+				</h:column>
+				
+				<h:column>
+				
+				<center><h1><f:facet name="header"><h:outputText value="Unit" /></f:facet></h1>
+				<h5><h:outputText value="#{cerveja.unit}" /></h5></center>
+			</h:column>
+			
+			<h:column>
+				<center><h1><f:facet name="header"><h:outputText value="Price" /></f:facet></h1>
+				<h5><h:outputText value="#{cerveja.price}" /></h5></center>
+				
+			</h:column>
+			
+			<h:column>
+				<center><h1><f:facet name="header"><h:outputText value="Country" /></f:facet></h1>
+				<h5><h:outputText value="#{cerveja.country}" /></h5></center>
+			</h:column>
+			
+		</h:dataTable>
+		
+	
+		<li class="nav-item">					
+		<a class="nav-link" href="http://localhost:8080/Exercicio1/faces/insert.xhtml"><h3>Do you think you know more? Click here and tell us everything!</h3></a>   
+		</li>  
+		<br></br>
+		<br></br>
+		
+	
+	</f:view>
+	
+</body>
+</html>
+
+

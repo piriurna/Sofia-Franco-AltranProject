@@ -1,0 +1,20 @@
+CREATE TABLE `cerveja` (
+  `id` int(11) NOT NULL,
+  `beerName` varchar(45) DEFAULT NULL,
+  `category` varchar(45) DEFAULT NULL,
+  `unit` varchar(45) DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
+  `country` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+CREATE TABLE `detalhe` (
+  `id` int(11) NOT NULL,
+  `beerName` varchar(45) DEFAULT NULL,
+  `details` varchar(1000) DEFAULT NULL,
+  `image` longblob,
+  `brewery` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
